@@ -11,6 +11,7 @@
 		85FA96D922DBD6FE00894887 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA96D722DBD6FE00894887 /* Main.storyboard */; };
 		85FA96DB22DBD70100894887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FA96DA22DBD70100894887 /* Assets.xcassets */; };
 		85FA96DE22DBD70100894887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA96DC22DBD70100894887 /* LaunchScreen.storyboard */; };
+		85FA96EE22DBD82700894887 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96ED22DBD82700894887 /* Contact.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		85FA96DA22DBD70100894887 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85FA96DD22DBD70100894887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85FA96DF22DBD70100894887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85FA96ED22DBD82700894887 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		85FA96EC22DBD7E600894887 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				85FA96ED22DBD82700894887 /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85FA96EE22DBD82700894887 /* Contact.swift in Sources */,
 				85FA96D422DBD6FE00894887 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
