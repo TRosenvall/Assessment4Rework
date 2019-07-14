@@ -19,15 +19,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" id="S0r-WK-mTF">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="contactCell" rowHeight="89" id="Oes-YZ-t1o" customClass="ContactTableViewCell" customModule="CloudContacts" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="89"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="S0r-WK-mTF" id="oaB-19-xOb">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oes-YZ-t1o" id="N9W-z7-OOd">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="88.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Xjc-nS-4Xf">
+                                            <rect key="frame" x="10" y="10" width="394" height="68.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZBn-u6-FME">
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="26.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26.5" id="bn5-lc-iTU"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Phone Number)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ook-PQ-tSC">
+                                                    <rect key="frame" x="0.0" y="30.5" width="394" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Email)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4b-rE-ASL">
+                                                    <rect key="frame" x="0.0" y="51.5" width="394" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Xjc-nS-4Xf" firstAttribute="centerX" secondItem="N9W-z7-OOd" secondAttribute="centerX" id="30q-QM-zDQ"/>
+                                        <constraint firstItem="Xjc-nS-4Xf" firstAttribute="top" secondItem="N9W-z7-OOd" secondAttribute="top" constant="10" id="CsT-YH-G8H"/>
+                                        <constraint firstAttribute="bottom" secondItem="Xjc-nS-4Xf" secondAttribute="bottom" constant="10" id="OJU-3F-zEc"/>
+                                        <constraint firstItem="Xjc-nS-4Xf" firstAttribute="leading" secondItem="N9W-z7-OOd" secondAttribute="leading" constant="10" id="Xxu-ef-89H"/>
+                                        <constraint firstAttribute="trailing" secondItem="Xjc-nS-4Xf" secondAttribute="trailing" constant="10" id="sdj-lw-8aP"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="2nJ-D5-WuH" kind="show" id="JUV-ve-AUh"/>
+                                    <outlet property="contactEmailLabel" destination="Q4b-rE-ASL" id="abi-vS-Qq3"/>
+                                    <outlet property="contactNameLabel" destination="ZBn-u6-FME" id="RD9-s0-Hk4"/>
+                                    <outlet property="contactNumberLabel" destination="Ook-PQ-tSC" id="MQc-PB-ozj"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -80,7 +117,4 @@
             <point key="canvasLocation" x="-959" y="143"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="5ez-Sj-T3c"/>
-    </inferredMetricsTieBreakers>
 </document>
