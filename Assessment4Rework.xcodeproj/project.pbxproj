@@ -12,6 +12,7 @@
 		85FA96DB22DBD70100894887 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85FA96DA22DBD70100894887 /* Assets.xcassets */; };
 		85FA96DE22DBD70100894887 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85FA96DC22DBD70100894887 /* LaunchScreen.storyboard */; };
 		85FA96EE22DBD82700894887 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96ED22DBD82700894887 /* Contact.swift */; };
+		85FA96F022DBD89400894887 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96EF22DBD89400894887 /* ContactController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		85FA96DD22DBD70100894887 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85FA96DF22DBD70100894887 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85FA96ED22DBD82700894887 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		85FA96EF22DBD89400894887 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		85FA96EA22DBD7CD00894887 /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				85FA96EF22DBD89400894887 /* ContactController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			files = (
 				85FA96EE22DBD82700894887 /* Contact.swift in Sources */,
 				85FA96D422DBD6FE00894887 /* AppDelegate.swift in Sources */,
+				85FA96F022DBD89400894887 /* ContactController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = Assessment4Rework/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Assessment4Rework/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
-				INFOPLIST_FILE = Assessment4Rework/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Assessment4Rework/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
