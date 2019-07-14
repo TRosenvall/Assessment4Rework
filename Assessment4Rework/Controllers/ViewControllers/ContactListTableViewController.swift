@@ -38,6 +38,14 @@ class ContactListTableViewController: UITableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO : - Segue
+        // Identifier
+        if segue.identifier == "toEditDetailView" {
+            // Index and Destination
+            guard let indexPath = tableView.indexPathForSelectedRow, let destinationVC = segue.destination as? TableDetailViewController else {return}
+            // Object to Send
+            let contact = ContactController.sharedInstance.contacts[indexPath.row]
+            // Object to Set
+            destinationVC.contactLandingPad = contact
+        }
     }
 }

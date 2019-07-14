@@ -13,7 +13,7 @@
         <!--Root View Controller-->
         <scene sceneID="pD3-MV-W8F">
             <objects>
-                <tableViewController id="SIT-pP-LGi" sceneMemberID="viewController">
+                <tableViewController id="SIT-pP-LGi" customClass="ContactListTableViewController" customModule="Assessment4Rework" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8UG-Qs-JcI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,6 +65,7 @@
                                     <outlet property="contactEmailLabel" destination="Q4b-rE-ASL" id="abi-vS-Qq3"/>
                                     <outlet property="contactNameLabel" destination="ZBn-u6-FME" id="RD9-s0-Hk4"/>
                                     <outlet property="contactNumberLabel" destination="Ook-PQ-tSC" id="MQc-PB-ozj"/>
+                                    <segue destination="2nJ-D5-WuH" kind="show" identifier="toEditDetailView" id="Trb-XW-48C"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -85,16 +86,91 @@
             </objects>
             <point key="canvasLocation" x="-41" y="143"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="QLY-lK-h3I">
             <objects>
-                <viewController id="2nJ-D5-WuH" sceneMemberID="viewController">
+                <viewController id="2nJ-D5-WuH" customClass="TableDetailViewController" customModule="Assessment4Rework" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vD-xM-tqV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="j9a-gl-9Jw">
+                                <rect key="frame" x="41.5" y="390" width="331" height="116"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="tcF-pb-xFj">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.5" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact Name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4J5-mO-cVN">
+                                                <rect key="frame" x="0.0" y="0.0" width="119.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sQf-Md-PQN">
+                                                <rect key="frame" x="0.0" y="43" width="119.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v59-Sw-Dvs">
+                                                <rect key="frame" x="0.0" y="86" width="119.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-YV-9gR">
+                                        <rect key="frame" x="129.5" y="0.0" width="201.5" height="116"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John Doe..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6cn-SH-CuB">
+                                                <rect key="frame" x="0.0" y="0.0" width="201.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="123.456.7890..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4A9-gv-Kzm">
+                                                <rect key="frame" x="0.0" y="43" width="201.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John@Doe.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zbk-jc-bqX">
+                                                <rect key="frame" x="0.0" y="86" width="201.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4A9-gv-Kzm" firstAttribute="height" secondItem="sQf-Md-PQN" secondAttribute="height" id="Knq-5o-ttL"/>
+                                    <constraint firstItem="Zbk-jc-bqX" firstAttribute="height" secondItem="v59-Sw-Dvs" secondAttribute="height" id="QKe-fH-PXB"/>
+                                    <constraint firstItem="6cn-SH-CuB" firstAttribute="height" secondItem="4J5-mO-cVN" secondAttribute="height" id="Za0-rd-BJK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="j9a-gl-9Jw" firstAttribute="width" secondItem="8vD-xM-tqV" secondAttribute="width" multiplier="0.8" id="F52-tl-EdF"/>
+                            <constraint firstItem="j9a-gl-9Jw" firstAttribute="centerX" secondItem="8vD-xM-tqV" secondAttribute="centerX" id="NQu-Jj-8zk"/>
+                            <constraint firstItem="j9a-gl-9Jw" firstAttribute="centerY" secondItem="8vD-xM-tqV" secondAttribute="centerY" id="QKC-je-A4c"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DJh-Io-Unv"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="eWK-YW-TYf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="bLI-Yg-cCM">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="2nJ-D5-WuH" id="NO7-6Z-9cP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="contactEmailTextField" destination="Zbk-jc-bqX" id="fva-wH-iN3"/>
+                        <outlet property="contactNameTextField" destination="6cn-SH-CuB" id="iGj-Oi-Dji"/>
+                        <outlet property="contactNumberTextField" destination="4A9-gv-Kzm" id="fkT-UY-6oc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aeZ-ih-PuY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,4 +193,7 @@
             <point key="canvasLocation" x="-959" y="143"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Trb-XW-48C"/>
+    </inferredMetricsTieBreakers>
 </document>

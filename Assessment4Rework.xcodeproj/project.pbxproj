@@ -15,6 +15,7 @@
 		85FA96F022DBD89400894887 /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96EF22DBD89400894887 /* ContactController.swift */; };
 		85FA96F222DBD9BA00894887 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96F122DBD9BA00894887 /* ContactListTableViewController.swift */; };
 		85FA96F422DBDACB00894887 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96F322DBDACB00894887 /* ContactTableViewCell.swift */; };
+		85FA96F622DBE31500894887 /* TableDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96F522DBE31500894887 /* TableDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		85FA96EF22DBD89400894887 /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		85FA96F122DBD9BA00894887 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		85FA96F322DBDACB00894887 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		85FA96F522DBE31500894887 /* TableDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				85FA96F122DBD9BA00894887 /* ContactListTableViewController.swift */,
+				85FA96F522DBE31500894887 /* TableDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				85FA96EE22DBD82700894887 /* Contact.swift in Sources */,
 				85FA96F422DBDACB00894887 /* ContactTableViewCell.swift in Sources */,
+				85FA96F622DBE31500894887 /* TableDetailViewController.swift in Sources */,
 				85FA96D422DBD6FE00894887 /* AppDelegate.swift in Sources */,
 				85FA96F222DBD9BA00894887 /* ContactListTableViewController.swift in Sources */,
 				85FA96F022DBD89400894887 /* ContactController.swift in Sources */,
