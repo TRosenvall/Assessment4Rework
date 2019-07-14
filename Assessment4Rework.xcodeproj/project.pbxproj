@@ -16,6 +16,7 @@
 		85FA96F222DBD9BA00894887 /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96F122DBD9BA00894887 /* ContactListTableViewController.swift */; };
 		85FA96F422DBDACB00894887 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96F322DBDACB00894887 /* ContactTableViewCell.swift */; };
 		85FA96F622DBE31500894887 /* TableDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FA96F522DBE31500894887 /* TableDetailViewController.swift */; };
+		85FA96FA22DBE5D900894887 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85FA96F922DBE5D900894887 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		85FA96F122DBD9BA00894887 /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 		85FA96F322DBDACB00894887 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		85FA96F522DBE31500894887 /* TableDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDetailViewController.swift; sourceTree = "<group>"; };
+		85FA96F722DBE5D600894887 /* Assessment4Rework.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Assessment4Rework.entitlements; sourceTree = "<group>"; };
+		85FA96F922DBE5D900894887 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85FA96FA22DBE5D900894887 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +52,7 @@
 			children = (
 				85FA96D222DBD6FE00894887 /* Assessment4Rework */,
 				85FA96D122DBD6FE00894887 /* Products */,
+				85FA96F822DBE5D900894887 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +67,7 @@
 		85FA96D222DBD6FE00894887 /* Assessment4Rework */ = {
 			isa = PBXGroup;
 			children = (
+				85FA96F722DBE5D600894887 /* Assessment4Rework.entitlements */,
 				85FA96EC22DBD7E600894887 /* Models */,
 				85FA96E722DBD7B100894887 /* Views */,
 				85FA96E922DBD7C700894887 /* Controllers */,
@@ -132,6 +138,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		85FA96F822DBE5D900894887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85FA96F922DBE5D900894887 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,6 +178,14 @@
 				TargetAttributes = {
 					85FA96CF22DBD6FE00894887 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -354,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Assessment4Rework/Assessment4Rework.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Assessment4Rework/Resources/Info.plist";
@@ -372,6 +395,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Assessment4Rework/Assessment4Rework.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YY8J3FPYX8;
 				INFOPLIST_FILE = "$(SRCROOT)/Assessment4Rework/Resources/Info.plist";
