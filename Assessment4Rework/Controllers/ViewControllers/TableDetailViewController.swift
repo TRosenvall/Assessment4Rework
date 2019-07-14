@@ -38,12 +38,23 @@ class TableDetailViewController: UIViewController {
             else {return}
         // If we have a contact from segue, update the contact.
         if let contact = contactLandingPad {
-            ContactController.sharedInstance.updateContact(contact: contact, contactName: contactName, contactNumber: contactNumber, contactEmail: contactEmail)
+            ContactController.sharedInstance.updateContact(contact: contact, contactName: contactName, contactNumber: contactNumber, contactEmail: contactEmail) { (success) in
+                print("Contact successfully updated")
+                DispatchQueue.main.async{
+                    // Pop off the view and go back to the ContactListTableView
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
         } else {
             // If we don't have a contact from segue, create a new one.
-            ContactController.sharedInstance.createNewContact(contactName: contactName, contactNumber: contactNumber, contactEmail: contactEmail)
+            ContactController.sharedInstance.createNewContact(contactName: contactName, contactNumber: contactNumber, contactEmail: contactEmail) { (success) in
+                print("Contact Successfully Created and Saved to iCloud")
+                DispatchQueue.main.async{
+                    // Pop off the view and go back to the ContactListTableView
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
         }
-        self.navigationController?.popViewController(animated: true)
     }
     
     // Update the views with the information passed in from the segue.

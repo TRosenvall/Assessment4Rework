@@ -10,8 +10,17 @@ import UIKit
 
 class ContactListTableViewController: UITableViewController {
 
+    // Fetch contacts when this view is loaded.
     override func viewDidLoad() {
         super.viewDidLoad()
+        ContactController.sharedInstance.fetchContacts { (success) in
+            if success {
+                print("Successfully fetched contacts from iCloud")
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     // Reload data whenever this view reappears.
